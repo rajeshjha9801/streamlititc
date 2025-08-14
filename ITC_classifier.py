@@ -19,9 +19,9 @@ os.makedirs(os.path.join(base_path, "Rules"), exist_ok=True)
 os.makedirs(os.path.join(base_path, "input"), exist_ok=True)
 os.makedirs(os.path.join(base_path, "output"), exist_ok=True)
 
-EXCEL_RULE_BOOK_PATH = os.path.join(base_path, "Rules", "rulebook.xlsx")
-PROCESSED_RULES_JSON_PATH = os.path.join(base_path, "Rules", "rules.json")
-HSN_TARIFF_CSV_PATH = os.path.join(base_path, "Rules", "pv_bcd_tariff_202506231736.csv")
+EXCEL_RULE_BOOK_PATH = os.path.join(base_path, "rulebook.xlsx")
+PROCESSED_RULES_JSON_PATH = os.path.join(base_path,"rules.json")
+HSN_TARIFF_CSV_PATH = os.path.join(base_path, "pv_bcd_tariff_202506231736.csv")
 
 INPUT_DATA_EXCEL_PATH = os.path.join(base_path, "input", "PO and Work Order Data 1.xlsx")
 OUTPUT_DATA_EXCEL_PATH = os.path.join(base_path, "output", "classified_output.xlsx")
@@ -297,8 +297,8 @@ def classify_itc_from_excel(INPUT_DATA_EXCEL_PATH):
     """Main function to load data, classify each item, and save results."""
     downloadfolder=os.path.join(os.path.join(os.environ['USERPROFILE']), 'Downloads')
     OUTPUT_DATA_EXCEL_PATH=os.path.join(downloadfolder,"classiifcation_output.xlsx")
-    PROCESSED_RULES_JSON_PATH=os.path.join(os.getcwd(),"Rules")
-    PROCESSED_RULES_JSON_PATH=os.path.join(PROCESSED_RULES_JSON_PATH,"rules.json")
+    #PROCESSED_RULES_JSON_PATH=os.path.join(os.getcwd(),"Rules")
+    PROCESSED_RULES_JSON_PATH=os.path.join(os.getcwd(),"rules.json")
     if not os.path.exists(PROCESSED_RULES_JSON_PATH): print(
         f"Error: Rules file '{PROCESSED_RULES_JSON_PATH}' not found."); return
 
@@ -441,6 +441,7 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
+
 
 
 
