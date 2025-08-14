@@ -1,0 +1,732 @@
+[
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": NaN,
+        "Nature of Supplier": "Compostion dealer",
+        "Type of Supply": "Any",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": NaN,
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": NaN,
+        "Nature of Supplier": "Non Resident tax payer",
+        "Type of Supply": "Any",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": NaN,
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(3) ",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Any",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Exclusively exempt supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "16(1)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Any",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Not for furtherance of business",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (a)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Motor Vehicles",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Seating capacity less than 13"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (a)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Motor Vehicles",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Seating capacity 13 or more"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (a)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Motor Vehicles",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further supply of such motor vehicles",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (a)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Motor Vehicles",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Transportation of passengers",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (a)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Motor Vehicles",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Imparting training on driving such motor vehicles",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (a)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Motor Vehicles",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Transportation of Goods",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (aa)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Vessels & Aircraft",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (aa)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Vessels & Aircraft",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further supply of such vessels or aircraft",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (aa)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Vessels & Aircraft",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Transportation of passengers",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (aa)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Vessels & Aircraft",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Imparting training on navigating such vessels or aircraft",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (aa)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Vessels & Aircraft",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Transportation of Goods",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Other",
+        "Category": "Seating capacity less than 13"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Other",
+        "Category": "Seating capacity 13 or more"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Further supply of such motor vehicles or aircraft",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Transportation of passengers",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Imparting training on such",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Transportation of Goods",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Employee",
+        "Intended Use": NaN,
+        "Category": "Not obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Employee",
+        "Intended Use": NaN,
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Other",
+        "Category": "Seating capacity less than 13"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Other",
+        "Category": "Seating capacity 13 or more"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Further supply of such motor vehicles or aircraft",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Transportation of passengers",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Imparting training on such",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Transportation of Goods",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Further supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Manufacture of motor vehicles or Vessels and Aircraft",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (ab)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Servicing and Repair and Maintenance",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Manufacture of motor vehicles or Vessels and Aircraft",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Other",
+        "Category": "Seating capacity less than 13"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Other",
+        "Category": "Seating capacity 13 or more"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "further supply of such motor vehicles",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Transportation of passengers",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Imparting training on driving such motor vehicles",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Transportation of Goods",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Food and beverages",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Not obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Outdoor catering",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Not obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Beauty treatment",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Not obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Health services",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Not obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Cosmetic and plastic surgery",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Not obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Personal Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Life Insurance",
+        "Intended Use": "Other",
+        "Category": "Not obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Food and beverages",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Outdoor catering",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Beauty treatment",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Health services",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Cosmetic and plastic surgery",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Personal Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Life Insurance",
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Membership of a club",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Not Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Membership of a club",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Health and fitness",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Travel benefits extended to employees",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Other",
+        "Category": "Obligatory under any other law"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Leasing, renting or hiring",
+        "Nature of Expense": NaN,
+        "Type": "Motor Vehicles or Vessels and Aircrafts",
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Food and beverages",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Outdoor catering",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Beauty treatment",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Health services",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Cosmetic and plastic surgery",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (b)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Personal Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Life Insurance",
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": NaN,
+        "Nature of Supplier": NaN,
+        "Type of Supply": "General Insurance",
+        "Nature of Expense": NaN,
+        "Type": "Other",
+        "Intended Use": NaN,
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Construction of Immovable property",
+        "Nature of Expense": "Capitalised",
+        "Type": NaN,
+        "Intended Use": "Not for plant and Machinery",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Construction of Immovable property",
+        "Nature of Expense": "Capitalised",
+        "Type": NaN,
+        "Intended Use": "Plant and Machinery",
+        "Category": "Other"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Construction of Immovable property",
+        "Nature of Expense": "Capitalised",
+        "Type": NaN,
+        "Intended Use": "Plant and Machinery",
+        "Category": "land, building or any other civil structures"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Construction of Immovable property",
+        "Nature of Expense": "Capitalised",
+        "Type": NaN,
+        "Intended Use": "Plant and Machinery",
+        "Category": "Telecommunication towers"
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Construction of Immovable property",
+        "Nature of Expense": "Capitalised",
+        "Type": NaN,
+        "Intended Use": "Plant and Machinery",
+        "Category": "Pipelines laid outside the factory premises"
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Construction of Immovable property",
+        "Nature of Expense": "Capitalised",
+        "Type": NaN,
+        "Intended Use": "Further Supply",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Construction of Immovable property",
+        "Nature of Expense": "Revenue",
+        "Type": NaN,
+        "Intended Use": NaN,
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (fa)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Any",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "CSR Expenses",
+        "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "No",
+        "Section Reference": "17(5) (h)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Any",
+        "Nature of Expense": NaN,
+        "Type": NaN,
+        "Intended Use": "Free Supply",
+        "Category": NaN
+    }
+]
