@@ -7,9 +7,9 @@ from typing import Dict, Any, List
 
 # --- CONFIGURATION ---
 # IMPORTANT: Replace with your actual Azure OpenAI details
-AZURE_OPENAI_API_KEY = "d2d3866c999c4454bc74ab43c707c7c4"
-AZURE_OPENAI_ENDPOINT = "https://gta-openai.openai.azure.com/"
-AZURE_OPENAI_DEPLOYMENT_NAME = "GTA-OPENAI"
+AZURE_OPENAI_API_KEY = os.environ.get('AZURE_OPENAI_API_KEY')
+AZURE_OPENAI_ENDPOINT = os.environ.get('AZURE_OPENAI_ENDPOINT')
+AZURE_OPENAI_DEPLOYMENT_NAME = os.environ.get('AZURE_OPENAI_DEPLOYMENT_NAME')
 
 # --- FILE PATHS ---
 base_path = os.getcwd()
@@ -441,6 +441,7 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
+
 
 
 
