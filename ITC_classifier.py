@@ -19,9 +19,9 @@ os.makedirs(os.path.join(base_path, "Rules"), exist_ok=True)
 os.makedirs(os.path.join(base_path, "input"), exist_ok=True)
 os.makedirs(os.path.join(base_path, "output"), exist_ok=True)
 
-EXCEL_RULE_BOOK_PATH = os.path.join(base_path, "rulebook.xlsx")
-PROCESSED_RULES_JSON_PATH = os.path.join(base_path,"rules.json")
-HSN_TARIFF_CSV_PATH = os.path.join(base_path, "pv_bcd_tariff_202506231736.csv")
+EXCEL_RULE_BOOK_PATH = os.path.join(base_path, "Rules", "rulebook.xlsx")
+PROCESSED_RULES_JSON_PATH = os.path.join(base_path, "Rules", "rules.json")
+HSN_TARIFF_CSV_PATH = os.path.join(base_path, "Rules", "pv_bcd_tariff_202506231736.csv")
 
 INPUT_DATA_EXCEL_PATH = os.path.join(base_path, "input", "PO and Work Order Data 1.xlsx")
 OUTPUT_DATA_EXCEL_PATH = os.path.join(base_path, "output", "classified_output.xlsx")
@@ -118,32 +118,66 @@ def get_classification_for_item(item_data: pd.Series, rules: List[Dict[str, Any]
     rules_text = json.dumps(rules, indent=2)
 
     prompt = f"""
-        You are an expert on tax and ITC classification. Your output must follow a strict format.
-
-        Here is a list of rules from a rule book. Each rule is a JSON object with fields like 'type of supply', 'type', 'intended use', 'category', 'Nature of Supplier','Nature of Expense' and 'ITC applicable'.
-
+        You are an expert on tax and Input Tax Credit (ITC) classification. Your task is to determine the eligibility of ITC for a given item. We are doing it for port operator and logistics company - Ports & Terminals - Cargo handling expertise.
+        First, you must use the provided set of rules. If a definitive classification cannot be made using these rules, you may then use your extensive knowledge of GST laws, including Indian Trade Classification (ITC-HS) and Section 17(5) of the CGST Act, to provide the most accurate assessment.
         RULES:
         ```json
         {rules_text}
         ```
-
+        Rules for ITC Eligibility
+        Here is a list of rules from a rule book. Each rule is a JSON object with fields like Nature of Supplier, Type of Supply, Nature of Expense, Type, Intended Use, Category, Section Reference, and ITC Eligibility.
+        
         Now, here is a new item that needs to be classified based on these rules:
         - Material Description: {material_description}
         - HSN Description: {hsn_description}
         - Nature of transaction : {nature_transaction}
         - Capital goods : {capital_goods}
 
-        **INSTRUCTIONS:**
-        1. Analyze the item details against the provided rules. Use both material description and HSN description.
-        2. Determine if Input Tax Credit (ITC) is applicable.
-        3. Formulate 3 relevant questions to ask the user to clarify any missing details needed for a more accurate classification, based on the rule book. Do not ask about HSN.
-        4. Maintain consistent reasoning and avoid changing answers between iterations.
+        New Item for Classification
+        Here are the details of a new item that needs to be classified.
+
+        Material Description: {material_description}
+
+        HSN Description: {hsn_description}
+
+        Nature of transaction: {nature_transaction}
+
+        Capital goods: {capital_goods}
+
+        Classification Process
+        Follow this step-by-step procedure to determine the ITC eligibility:
+
+        Attribute Extraction: From the Material Description, HSN Description, Nature of transaction, and Capital goods of the new item, extract relevant attributes. Map these to the rulebook's columns:
+
+        Type of Supply: Derive from Material Description or HSN Description. If a specific type cannot be determined, treat it as "Any."
+
+        Nature of Expense: Use the Capital goods field. If "Yes," the Nature of Expense is "Capitalised." If "No," it is "Revenue."
+
+        Other Attributes: Identify values for Nature of Supplier, Type, Intended Use, and Category from the descriptions and transaction details.
+
+        Please make note of below suggestions too:
+        1) If Intended use cannot be determined as per rule book then assume that all material and services are in furtherance of business
+        2) In case of motor vehicles - AI to first determine whether it is a passenger vehicle or commercial vehicle for movement of goods.If it is later,then no need to check for seating capacity.
+
+        Rule Matching (Internal Rules First):
+
+        Compare the extracted attributes to the rules in the provided JSON. Find the most specific rule that matches the highest number of attributes.
+
+        Once a matching rule is found, determine the ITC Eligibility ("Yes" or "No").
+
+        External Knowledge (If Rules Are Insufficient):
+
+        If no specific rule can be found within the provided JSON, use your external knowledge of GST laws to determine the ITC applicability.
+
+        Refer to common blocked credits under Section 17(5) of the CGST Act (e.g., motor vehicles, food and beverages, construction services for immovable property) and other relevant regulations.
+        However in case of construction of immovable property- repair and maintenance of Building, Plant and Machinary, Civil work etc. whenever not capitalised ITC should be allowed .
+        
 
         **OUTPUT FORMAT (MUST be followed exactly):**
         Answer: [Yes/No]
         Confidence Score: [Provide a percentage, e.g., 95%]
         Justification: [Provide a brief and precise justification for your answer, referencing the rules or item details.]
-        Questions for Clarification:
+        Questions for Clarification(Formulate relevant questions to ask as per rule book):
         1. [First question]
         2. [Second question]
         3. [Third question]
@@ -297,8 +331,8 @@ def classify_itc_from_excel(INPUT_DATA_EXCEL_PATH):
     """Main function to load data, classify each item, and save results."""
     downloadfolder=os.path.join(os.path.join(os.environ['USERPROFILE']), 'Downloads')
     OUTPUT_DATA_EXCEL_PATH=os.path.join(downloadfolder,"classiifcation_output.xlsx")
-    #PROCESSED_RULES_JSON_PATH=os.path.join(os.getcwd(),"Rules")
-    PROCESSED_RULES_JSON_PATH=os.path.join(os.getcwd(),"rules.json")
+    PROCESSED_RULES_JSON_PATH=os.path.join(os.getcwd(),"Rules")
+    PROCESSED_RULES_JSON_PATH=os.path.join(PROCESSED_RULES_JSON_PATH,"rules.json")
     if not os.path.exists(PROCESSED_RULES_JSON_PATH): print(
         f"Error: Rules file '{PROCESSED_RULES_JSON_PATH}' not found."); return
 
@@ -310,7 +344,7 @@ def classify_itc_from_excel(INPUT_DATA_EXCEL_PATH):
     print(f"Loading input data from '{INPUT_DATA_EXCEL_PATH}'...")
     try:
         # Use dtype=str to prevent pandas from auto-interpreting types like HSN codes
-        df = pd.read_csv(INPUT_DATA_EXCEL_PATH, dtype=str).fillna('N/A')
+        df = pd.read_csv(INPUT_DATA_EXCEL_PATH, dtype=str,encoding='iso-8859-1').fillna('N/A')
     except Exception as e:
         print(f"Failed to read input Excel file: {e}");
         return
@@ -323,6 +357,8 @@ def classify_itc_from_excel(INPUT_DATA_EXCEL_PATH):
         print(f"--- Processing row {index + 1}/{total_rows}: {row.get('Material Description', 'N/A')} ---")
 
         raw_result = get_classification_for_item(row, rules)
+        import time
+        time.sleep(0.2)
 
         print("--- RAW AI RESPONSE (for debugging) ---")
         print(raw_result)
@@ -382,14 +418,14 @@ def classify_itc(material_description,product_hsn,nature_transaction,capital_goo
     rules_text = json.dumps(rules, indent=2)
     
     prompt = f"""
-    You are an expert on tax and ITC classification.
-    
-    Here is a list of rules from a rule book. Each rule is a JSON object with fields like 'type of supply', 'type', 'intended use', 'category', 'Nature of Supplier','Nature of Expense' and 'ITC applicable'.
-    
+    You are an expert on tax and Input Tax Credit (ITC) classification. Your task is to determine the eligibility of ITC for a given item. We are doing it for port operator and logistics company - Ports & Terminals - Cargo handling expertise.
+    First, you must use the provided set of rules. If a definitive classification cannot be made using these rules, you may then use your extensive knowledge of GST laws, including Indian Trade Classification (ITC-HS) and Section 17(5) of the CGST Act, to provide the most accurate assessment.
     RULES:
     ```json
     {rules_text}
     ```
+    Rules for ITC Eligibility
+    Here is a list of rules from a rule book. Each rule is a JSON object with fields like Nature of Supplier, Type of Supply, Nature of Expense, Type, Intended Use, Category, Section Reference, and ITC Eligibility.
     
     Now, here is a new item that needs to be classified based on these rules:
     - Material Description: {material_description}
@@ -397,21 +433,52 @@ def classify_itc(material_description,product_hsn,nature_transaction,capital_goo
     - Nature of transaction : {nature_transaction}
     - Capital goods : {capital_goods}
 
-    We have to use material description and hsn description as input to apply rules.
-    Out of material description or hsn description, if rules fits in any one of them then use that for classification.
-    Description has to go through rule book where it will identify nature of supplier from description , if AI is not able 
-    to identify than treat it as any.
-    post that type of supply will be identified along with nature of expense. Type, intended use and category will be used to drill down 
-    for further classification analyis.
+    New Item for Classification
+    Here are the details of a new item that needs to be classified.
 
-    
-    Based on the provided RULES and the new item's details, is Input Tax Credit (ITC) applicable? 
-    
+    Material Description: {material_description}
+
+    HSN Description: {hsn_description}
+
+    Nature of transaction: {nature_transaction}
+
+    Capital goods: {capital_goods}
+
+    Classification Process
+    Follow this step-by-step procedure to determine the ITC eligibility:
+
+    Attribute Extraction: From the Material Description, HSN Description, Nature of transaction, and Capital goods of the new item, extract relevant attributes. Map these to the rulebook's columns:
+
+    Type of Supply: Derive from Material Description or HSN Description. If a specific type cannot be determined, treat it as "Any."
+
+    Nature of Expense: Use the Capital goods field. If "Yes," the Nature of Expense is "Capitalised." If "No," it is "Revenue."
+
+    Other Attributes: Identify values for Nature of Supplier, Type, Intended Use, and Category from the descriptions and transaction details.
+
+    Please make note of below suggestions too:
+    1) If Intended use cannot be determined as per rule book then assume that all material and services are in furtherance of business
+    2) In case of motor vehicles - AI to first determine whether it is a passenger vehicle or commercial vehicle for movement of goods.If it is later,
+       then no need to check for seating capacity.
+
+    Rule Matching (Internal Rules First):
+
+    Compare the extracted attributes to the rules in the provided JSON. Find the most specific rule that matches the highest number of attributes.
+
+    Once a matching rule is found, determine the ITC Eligibility ("Yes" or "No").
+
+    External Knowledge (If Rules Are Insufficient):
+
+    If no specific rule can be found within the provided JSON, use your external knowledge of GST laws to determine the ITC applicability.
+
+    Refer to common blocked credits under Section 17(5) of the CGST Act (e.g., motor vehicles, food and beverages, construction services for immovable property) and other relevant regulations.
+    However in case of construction of immovable property- repair and maintenance of Building, Plant and Machinary, Civil work etc. whenever not capitalised ITC should be allowed .
+
     Please provide a clear answer of 'Yes' or 'No', along with confidence score followed by a brief and precise justification. 
-    Also Formulate 3 most relevant questions to ask 
+    Also Formulate 3 most relevant questions to ask as per rule book.
     the user about the material/product description to obtain any  missing or unclear details and it should be related to rule book.Questions should not be about HSN. 
     These questions should help refine the suggestions further and ensure proper classification is identified.
     Stop hullicination as Answers keep on changing with every itertaion. 
+    If you used external knowledge, state that a specific rule was not found in the provided list and explain your conclusion based on the relevant GST law (e.g., citing a specific section or rule).
     """
     
     # Get the classification from Azure OpenAI
@@ -441,8 +508,6 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
-
-
 
 
 
