@@ -82,7 +82,7 @@ if "search_results" in st.session_state:
     st.text_area(
         "Individual Search Results",
         st.session_state["search_results"],
-        height=500
+        height=400
     )
 
 st.markdown("---")
@@ -138,6 +138,7 @@ if st.button("Upload bulk data"):
 
 
 st.markdown("---")
+
 
 
 
