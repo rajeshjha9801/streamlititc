@@ -1,6 +1,6 @@
 import pandas as pd
 import json
-import os
+import os,io
 import requests
 import re
 from typing import Dict, Any, List
@@ -522,6 +522,7 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
+
 
 
 
