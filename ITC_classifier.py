@@ -330,7 +330,7 @@ def classify_itc_from_excel(INPUT_DATA_EXCEL_PATH):
 
     """Main function to load data, classify each item, and save results."""
     #downloadfolder=os.path.join(os.path.join(os.environ['USERPROFILE']), 'Downloads')
-    OUTPUT_DATA_EXCEL_PATH=os.path.join("classiifcation_output.xlsx")
+    OUTPUT_DATA_EXCEL_PATH=os.path.join("classified_output.xlsx")
     PROCESSED_RULES_JSON_PATH=os.path.join(os.getcwd(),"Rules")
     PROCESSED_RULES_JSON_PATH=os.path.join(PROCESSED_RULES_JSON_PATH,"rules.json")
     if not os.path.exists(PROCESSED_RULES_JSON_PATH): print(
@@ -508,6 +508,7 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
+
 
 
 
