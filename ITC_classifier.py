@@ -19,12 +19,12 @@ os.makedirs(os.path.join(base_path, "Rules"), exist_ok=True)
 os.makedirs(os.path.join(base_path, "input"), exist_ok=True)
 os.makedirs(os.path.join(base_path, "output"), exist_ok=True)
 
-EXCEL_RULE_BOOK_PATH = os.path.join(base_path, "Rules", "rulebook.xlsx")
-PROCESSED_RULES_JSON_PATH = os.path.join(base_path, "Rules", "rules.json")
-HSN_TARIFF_CSV_PATH = os.path.join(base_path, "Rules", "pv_bcd_tariff_202506231736.csv")
+EXCEL_RULE_BOOK_PATH = os.path.join(base_path, "rulebook.xlsx")
+PROCESSED_RULES_JSON_PATH = os.path.join(base_path, "rules.json")
+HSN_TARIFF_CSV_PATH = os.path.join(base_path, "pv_bcd_tariff_202506231736.csv")
 
-INPUT_DATA_EXCEL_PATH = os.path.join(base_path, "input", "PO and Work Order Data 1.xlsx")
-OUTPUT_DATA_EXCEL_PATH = os.path.join(base_path, "output", "classified_output.xlsx")
+INPUT_DATA_EXCEL_PATH = os.path.join(base_path, "PO and Work Order Data 1.xlsx")
+OUTPUT_DATA_EXCEL_PATH = os.path.join(base_path, "classified_output.xlsx")
 
 # --- GLOBAL DATA ---
 HSN_TARIFF_DATA = None
@@ -508,6 +508,7 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
+
 
 
 
