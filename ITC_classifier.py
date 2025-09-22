@@ -380,7 +380,19 @@ def classify_itc_from_excel(INPUT_DATA_EXCEL_PATH):
     final_df = pd.concat([df.reset_index(drop=True), results_df.reset_index(drop=True)], axis=1)
 
     try:
-        final_df.to_excel(OUTPUT_DATA_EXCEL_PATH, index=False)
+        excel_buffer = io.BytesIO()
+        with pd.ExcelWriter(excel_buffer, engine='xlsxwriter') as writer:
+            final_df.to_excel(writer, index=False, sheet_name='ITC Classification')
+        excel_buffer.seek(0)
+        st.success("Classification complete! Click the button below to download the results.")
+        st.download_button(
+                    label="Download Classified Data as Excel",
+                    data=excel_buffer,
+                    file_name="classified_output.xlsx",
+                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                )
+        return "success"
+        #final_df.to_excel(OUTPUT_DATA_EXCEL_PATH, index=False)
         return("success")
         print(f"\n--- CLASSIFICATION COMPLETE ---")
         print(f"All items processed. Results saved to '{OUTPUT_DATA_EXCEL_PATH}'.")
@@ -508,6 +520,7 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
+
 
 
 
