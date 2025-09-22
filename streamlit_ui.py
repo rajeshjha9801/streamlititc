@@ -68,7 +68,7 @@ if st.button("Submit for Classification"):
         st.write(f"**AI result:**")
         results_text=''
         results_text=ITC_classifier.main(material_description,product_hsn,nature_of_transaction,capital_goods)
-        st.success(f"Result'{results_text}' found!")
+        st.success(f"Individual Search Results'{results_text}'")
         st.session_state["search_results"] = results_text
         # Add your classification logic here
     else:
@@ -139,6 +139,7 @@ if st.button("Upload bulk data"):
 
 
 st.markdown("---")
+
 
 
 
