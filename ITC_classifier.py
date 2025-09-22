@@ -349,7 +349,7 @@ def classify_itc_from_excel(INPUT_DATA_EXCEL_PATH):
         df = pd.read_csv(INPUT_DATA_EXCEL_PATH, dtype=str,encoding='iso-8859-1').fillna('N/A')
     except Exception as e:
         print(f"Failed to read input Excel file: {e}");
-        return
+        return "fail to upload file"
 
     parsed_results = []
     total_rows = len(df)
@@ -527,6 +527,7 @@ def main(material_description,product_hsn,nature_transaction,capital_goods):
 
 
     
+
 
 
 
