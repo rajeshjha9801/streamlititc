@@ -728,5 +728,15 @@
         "Type": NaN,
         "Intended Use": "Free Supply",
         "Category": NaN
+    },
+    {
+        "ITC Eligibility ": "Yes",
+        "Section Reference": "17(5) (c) (d)",
+        "Nature of Supplier": NaN,
+        "Type of Supply": "Repair and maintainence of immovable property including plant and machinery",
+        "Nature of Expense": "Revenue",
+        "Type": NaN,
+        "Intended Use": NaN,
+        "Category": NaN
     }
 ]
