@@ -79,12 +79,12 @@ if st.button("Submit for Classification"):
     
 
 # Use session state to persist the text area content across reruns
-if "search_results" in st.session_state:
-    st.text_area(
-        "Individual Search Results",
-        st.session_state["search_results"],
-        height=400
-    )
+# if "search_results" in st.session_state:
+#     st.text_area(
+#         "Individual Search Results",
+#         st.session_state["search_results"],
+#         height=400
+#     )
 
 st.markdown("---")
 
@@ -139,6 +139,7 @@ if st.button("Upload bulk data"):
 
 
 st.markdown("---")
+
 
 
 
